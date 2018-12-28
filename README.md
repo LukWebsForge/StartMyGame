@@ -7,6 +7,10 @@ as cloud providers.
 You find more details on how to setup a TTT server 
 [here](https://old.e-smog.org/garrys-mod-ttt-dedicated-server-erstellenpart-1/).
 
+This software is written in Go and uses vgo (Versioned Go Prototype).
+
+A guide how to configure (everything is in a single config.json file) will follow soon.
+
 ### Libraries
 
 * [net/http](https://golang.org/pkg/net/http/)
@@ -14,6 +18,3 @@ You find more details on how to setup a TTT server
 * [james4k/rcon](https://github.com/james4k/rcon)
 * [hetznercloud/hcloud-go](https://github.com/hetznercloud/hcloud-go)
 * [digitalocean/godo](https://github.com/digitalocean/godo)
-
-* [NES.css](https://github.com/nostalgic-css/NES.css)
-* [Vue.js](https://vuejs.org/v2/guide/)
