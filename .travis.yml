@@ -2,4 +2,6 @@ language: go
 
 go:
   - "1.11"
-  - master
+
+install: true
+script: GO111MODULE=on go build ./...
