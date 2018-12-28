@@ -8,7 +8,6 @@ import (
 	"time"
 )
 
-// TODO: Cleanup after 30 minutes
 type StartupProgress struct {
 	start   time.Time
 	Current int

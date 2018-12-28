@@ -74,7 +74,7 @@ func CreateIfNotExists() (bool, error) {
 			CheckInterval: 5,
 			ShutdownAfter: 60,
 		},
-		Web: Web{Port: 8011, CorsDomain: "ttt.example.com"},
+		Web: Web{Port: 8011, CorsDomain: "http://ttt.example.com"},
 	}
 
 	bytes, err := json.MarshalIndent(defaultConf, "", "    ")
@@ -82,7 +82,8 @@ func CreateIfNotExists() (bool, error) {
 		return false, fmt.Errorf("can't compose config: %v", err)
 	}
 
-	err = ioutil.WriteFile(configPath, bytes, os.ModeAppend)
+	// Permission 0640: The user can read and write, the group can read
+	err = ioutil.WriteFile(configPath, bytes, os.FileMode(0640))
 	if err != nil {
 		return false, fmt.Errorf("can't write config: %v", err)
 	}
